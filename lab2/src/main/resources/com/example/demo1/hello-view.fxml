@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Controller">
+    <center>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <TableView fx:id="tableArea" layoutX="-1.0" layoutY="-3.0" prefHeight="403.0" prefWidth="650.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="50.0" text="id" />
+                    <TableColumn fx:id="nColumn" prefWidth="96.0" text="n" />
+                    <TableColumn fx:id="threadsColumn" prefWidth="100.0" text="threads" />
+                    <TableColumn fx:id="resultColumn" prefWidth="269.0" text="result" />
+                    <TableColumn fx:id="timeColumn" prefWidth="133.0" text="time" />
+                </columns></TableView>
+        </AnchorPane>
+    </center>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <TextField fx:id="splitCount" promptText="Split count">
+                <VBox.margin>
+                    <Insets top="100.0" />
+                </VBox.margin>
+            </TextField>
+            <TextField fx:id="threadsCount" promptText="Threads count">
+                <VBox.margin>
+                    <Insets top="20.0" />
+                </VBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#calculateIntegral" prefWidth="150.0" text="Calculate">
+                <VBox.margin>
+                    <Insets top="20.0" />
+                </VBox.margin>
+            </Button>
+        </VBox>
+    </left>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="Help">
+                <MenuItem mnemonicParsing="false" text="About" />
+            </Menu>
+        </MenuBar>
+    </top>
+</BorderPane>
